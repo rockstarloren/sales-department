@@ -11,8 +11,8 @@ function Graphics() {
   });
 
   const [result, setResult] = useState({
-    ETA: "",
-    price: "",
+    ETA: 0,
+    price: 0,
   });
 
   const { quantity, rushDays } = formData;

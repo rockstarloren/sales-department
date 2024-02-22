@@ -2,8 +2,8 @@ import { useState } from "react";
 
 function Build() {
   var [result, setResult] = useState({
-    ETA: "",
-    price: "",
+    ETA: 0,
+    price: 0,
   });
   var [formData, setFormData] = useState({
     sections: "",
