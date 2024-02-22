@@ -1,20 +1,20 @@
-import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Nav from './components/Nav';
-import Design from './components/Design';
-import Build from './components/Build';
-import Graphics from './components/Graphics';
-import Technical from './components/Technical';
+import "./App.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Nav from "./components/Nav";
+import Design from "./components/Design";
+import Build from "./components/Build";
+import Graphics from "./components/Graphics";
+import Technical from "./components/Technical";
 
 function App() {
   return (
     <Router>
-      <Nav/>
+      <Nav />
       <Routes>
-        <Route path='/' element={<Design/>}/>
-        <Route path='/build' element={<Build/>}/>
-        <Route path='/graphics' element={<Graphics/>}/>
-        <Route path='/technical' element={<Technical/>}/>
+        <Route path="/" element={<Design />} />
+        <Route path="/build" element={<Build />} />
+        <Route path="/graphics" element={<Graphics />} />
+        <Route path="/technical" element={<Technical />} />
       </Routes>
     </Router>
   );

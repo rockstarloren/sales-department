@@ -77,70 +77,109 @@ function Graphics() {
 
   return (
     <div>
-      <h1 className="text-center font-bold text-xl">Graphics Calculator</h1>
-      <form onSubmit={handleSubmit}>
+      <h2 className="text-center font-bold text-2xl m-4">Graphics</h2>
+      <form onSubmit={handleSubmit} className="grid gap-2">
         <div>
-          <label htmlFor="quantity">Quantity</label>
           <input
             id="quantity"
             type="number"
             name="quantity"
             onChange={handleInput}
             value={quantity}
+            placeholder="Number of Sections"
+            className="py-3 px-2 outline-none border border-slate-300 rounded w-full"
           ></input>
         </div>
         <div>
-          <label htmlFor="rushDays">Rush Days</label>
           <input
             id="rushDays"
             type="number"
             name="rushDays"
             onChange={handleInput}
             value={rushDays}
+            placeholder="Rush Days"
+            className="py-3 px-2 outline-none border border-slate-300 rounded w-full"
           ></input>
         </div>
-        <div>
-          <input
-            id="ebooks"
-            type="checkbox"
-            name="ebooks"
-            value={graphic}
-            onChange={handleCheckbox}
-          ></input>
-          <label htmlFor="ebooks">Ebooks/PDFs</label>
-          <input
-            id="slides"
-            type="checkbox"
-            name="slides"
-            value={graphic}
-            onChange={handleCheckbox}
-          ></input>
-          <label htmlFor="ebooks">Slides/Carousel</label>
-          <input
-            id="logo"
-            type="checkbox"
-            name="logo"
-            value={graphic}
-            onChange={handleCheckbox}
-          ></input>
-          <label htmlFor="ebooks">Logo</label>
-          <input
-            id="others"
-            type="checkbox"
-            name="others"
-            value={graphic}
-            onChange={handleCheckbox}
-          ></input>
-          <label htmlFor="ebooks">Others</label>
-        </div>
-        <input type="submit" />
-      </form>
-      <div>
-        <p>
-          Deadline: <span>{ETA} Days</span>
+        <p className="my-2 text-sm text-[#007872] font-bold">
+          *Please select the type of graphic:
         </p>
-        <p>
-          Price: <span>${price}</span>
+        <div className="grid gap-2 grid-flow-col place-content-center">
+          <label
+            htmlFor="ebooks"
+            className="font-bold text-sm flex items-center rounded border border-slate-300 p-2"
+          >
+            <input
+              id="ebooks"
+              type="checkbox"
+              name="ebooks"
+              value={graphic}
+              onChange={handleCheckbox}
+              className="mx-2 w-4 h-4"
+            ></input>
+            Ebooks/PDFs
+          </label>
+          <label
+            htmlFor="slides"
+            className="font-bold text-sm flex items-center rounded border border-slate-300 p-2"
+          >
+            <input
+              id="slides"
+              type="checkbox"
+              name="slides"
+              value={graphic}
+              onChange={handleCheckbox}
+              className="mx-2 w-4 h-4"
+            ></input>
+            Slides/Carousel
+          </label>
+          <label
+            htmlFor="logo"
+            className="font-bold text-sm flex items-center rounded border border-slate-300 p-2"
+          >
+            <input
+              id="logo"
+              type="checkbox"
+              name="logo"
+              value={graphic}
+              onChange={handleCheckbox}
+              className="mx-2 w-4 h-4"
+            ></input>
+            Logo
+          </label>
+          <label
+            htmlFor="others"
+            className="font-bold flex items-center rounded border border-slate-300 p-2"
+          >
+            <input
+              id="others"
+              type="checkbox"
+              name="others"
+              value={graphic}
+              onChange={handleCheckbox}
+              className="mx-2 w-4 h-4"
+            ></input>
+            Others
+          </label>
+        </div>
+        <input
+          type="submit"
+          value="Calculate"
+          className="text-white font-bold text-sm cursor-pointer bg-[#007872] rounded cursor-pointer hover:bg-[#008f88] py-3 px-6"
+        />
+      </form>
+      <div className="my-4 grid grid-flow-col gap-2">
+        <p className="bg-[#a5c5ce] p-4 rounded">
+          <span className="block font-bold">Price:</span>
+          <span className="font-bold text-3xl">
+            ${price.toLocaleString("en-US")}
+          </span>
+        </p>
+        <p className="bg-[#a5c5ce] p-4 rounded">
+          <span className="block font-bold">Deadline:</span>
+          <span className="font-bold text-3xl">
+            {ETA} <span className="font-bold text-xl">day/s</span>
+          </span>
         </p>
       </div>
     </div>

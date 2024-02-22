@@ -52,36 +52,48 @@ function Design() {
 
   return (
     <div>
-      <h2 className="text-center font-bold text-xl">Design Calculator</h2>
-      <form onSubmit={handleSubmit}>
+      <h2 className="text-center font-bold text-2xl m-4">Design</h2>
+      <form onSubmit={handleSubmit} className="grid gap-2">
         <div>
-          <label htmlFor="sections">Number of Sections</label>
           <input
             id="sections"
             type="number"
             value={formData?.sections}
             name="sections"
             onChange={handleInput}
+            placeholder="Number of Sections"
+            className="py-3 px-2 outline-none border border-slate-300 rounded w-full"
           ></input>
         </div>
         <div>
-          <label htmlFor="rush-days">Rush Days</label>
           <input
             id="rush-days"
             type="number"
             name="rushDays"
             value={formData?.rushDays}
             onChange={handleInput}
+            placeholder="Rush Days"
+            className="py-3 px-2 outline-none border border-slate-300 rounded w-full"
           ></input>
         </div>
-        <input type="submit" />
+        <input
+          type="submit"
+          value="Calculate"
+          className="text-white font-bold text-sm cursor-pointer bg-[#007872] rounded cursor-pointer hover:bg-[#008f88] py-3 px-6"
+        />
       </form>
-      <div>
-        <p>
-          Deadline: <span>{ETA} Days</span>
+      <div className="my-4 grid grid-flow-col gap-2">
+        <p className="bg-[#a5c5ce] p-4 rounded">
+          <span className="block font-bold">Price:</span>
+          <span className="font-bold text-3xl">
+            ${price.toLocaleString("en-US")}
+          </span>
         </p>
-        <p>
-          Price: <span>${price}</span>
+        <p className="bg-[#a5c5ce] p-4 rounded">
+          <span className="block font-bold">Deadline:</span>
+          <span className="font-bold text-3xl">
+            {ETA} <span className="font-bold text-xl">day/s</span>
+          </span>
         </p>
       </div>
     </div>
