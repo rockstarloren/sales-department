@@ -21,21 +21,21 @@ function Technical() {
 
   const { ETA, price } = result;
 
-  const handleCheckbox = (e) => {
+  const handleRadio = (e) => {
     if (e.target.checked) {
       setChecked((data) => ({
         ...data,
-        technical: e.target.name,
+        technical: e.target.id,
       }));
     }
     console.log(technical);
   };
 
   const handleInput = (e) => {
-    const { name, value } = e.target;
+    const { id, value } = e.target;
     setFormData((data) => ({
       ...data,
-      [name]: value,
+      [id]: value,
     }));
   };
 
@@ -120,10 +120,10 @@ function Technical() {
             >
               <input
                 id="domain"
-                type="checkbox"
-                name="domain"
+                type="radio"
+                name="group"
                 value={technical}
-                onChange={handleCheckbox}
+                onChange={handleRadio}
                 className="mx-2 w-4 h-4"
               ></input>
               Domain
@@ -134,10 +134,10 @@ function Technical() {
             >
               <input
                 id="email"
-                type="checkbox"
-                name="email"
+                type="radio"
+                name="group"
                 value={technical}
-                onChange={handleCheckbox}
+                onChange={handleRadio}
                 className="mx-2 w-4 h-4"
               ></input>
               Email Automation
@@ -150,10 +150,10 @@ function Technical() {
             >
               <input
                 id="calendar"
-                type="checkbox"
-                name="calendar"
+                type="radio"
+                name="group"
                 value={technical}
-                onChange={handleCheckbox}
+                onChange={handleRadio}
                 className="mx-2 w-4 h-4"
               ></input>
               Calendar
@@ -164,10 +164,10 @@ function Technical() {
             >
               <input
                 id="product"
-                type="checkbox"
-                name="product"
+                type="radio"
+                name="group"
                 value={technical}
-                onChange={handleCheckbox}
+                onChange={handleRadio}
                 className="mx-2 w-4 h-4"
               ></input>
               Product Setup
@@ -179,10 +179,10 @@ function Technical() {
           >
             <input
               id="form"
-              type="checkbox"
-              name="form"
+              type="radio"
+              name="group"
               value={technical}
-              onChange={handleCheckbox}
+              onChange={handleRadio}
               className="mx-2 w-4 h-4"
             ></input>
             Form Setup

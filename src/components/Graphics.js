@@ -21,21 +21,21 @@ function Graphics() {
 
   const { ETA, price } = result;
 
-  const handleCheckbox = (e) => {
+  const handleRadio = (e) => {
     if (e.target.checked) {
       setChecked((data) => ({
         ...data,
-        graphic: e.target.name,
+        graphic: e.target.id,
       }));
     }
     console.log(graphic);
   };
 
   const handleInput = (e) => {
-    const { name, value } = e.target;
+    const { id, value } = e.target;
     setFormData((data) => ({
       ...data,
-      [name]: value,
+      [id]: value,
     }));
   };
 
@@ -111,10 +111,10 @@ function Graphics() {
           >
             <input
               id="ebooks"
-              type="checkbox"
-              name="ebooks"
+              type="radio"
+              name="group"
               value={graphic}
-              onChange={handleCheckbox}
+              onChange={handleRadio}
               className="mx-2 w-4 h-4"
             ></input>
             Ebooks/PDFs
@@ -125,10 +125,10 @@ function Graphics() {
           >
             <input
               id="slides"
-              type="checkbox"
-              name="slides"
+              type="radio"
+              name="group"
               value={graphic}
-              onChange={handleCheckbox}
+              onChange={handleRadio}
               className="mx-2 w-4 h-4"
             ></input>
             Slides/Carousel
@@ -139,24 +139,24 @@ function Graphics() {
           >
             <input
               id="logo"
-              type="checkbox"
-              name="logo"
+              type="radio"
+              name="group"
               value={graphic}
-              onChange={handleCheckbox}
+              onChange={handleRadio}
               className="mx-2 w-4 h-4"
             ></input>
             Logo
           </label>
           <label
             htmlFor="others"
-            className="font-bold flex items-center rounded border border-slate-300 p-2"
+            className="font-bold text-sm flex items-center rounded border border-slate-300 p-2"
           >
             <input
               id="others"
-              type="checkbox"
-              name="others"
+              type="radio"
+              name="group"
               value={graphic}
-              onChange={handleCheckbox}
+              onChange={handleRadio}
               className="mx-2 w-4 h-4"
             ></input>
             Others
