@@ -106,62 +106,66 @@ function Graphics() {
           *Please select the type of graphic:
         </p>
         <div className="grid gap-2 grid-flow-col place-content-center">
-          <label
-            htmlFor="ebooks"
-            className="font-bold text-sm flex items-center rounded border border-slate-300 p-2"
-          >
-            <input
-              id="ebooks"
-              type="radio"
-              name="group"
-              value={graphic}
-              onChange={handleRadio}
-              className="mx-2 w-4 h-4"
-            ></input>
-            Ebooks/PDFs
-          </label>
-          <label
-            htmlFor="slides"
-            className="font-bold text-sm flex items-center rounded border border-slate-300 p-2"
-          >
-            <input
-              id="slides"
-              type="radio"
-              name="group"
-              value={graphic}
-              onChange={handleRadio}
-              className="mx-2 w-4 h-4"
-            ></input>
-            Slides/Carousel
-          </label>
-          <label
-            htmlFor="logo"
-            className="font-bold text-sm flex items-center rounded border border-slate-300 p-2"
-          >
-            <input
-              id="logo"
-              type="radio"
-              name="group"
-              value={graphic}
-              onChange={handleRadio}
-              className="mx-2 w-4 h-4"
-            ></input>
-            Logo
-          </label>
-          <label
-            htmlFor="others"
-            className="font-bold text-sm flex items-center rounded border border-slate-300 p-2"
-          >
-            <input
-              id="others"
-              type="radio"
-              name="group"
-              value={graphic}
-              onChange={handleRadio}
-              className="mx-2 w-4 h-4"
-            ></input>
-            Others
-          </label>
+          <div className="grid gap-2">
+            <label
+              htmlFor="ebooks"
+              className="font-bold text-sm flex items-center rounded border border-slate-300 p-2"
+            >
+              <input
+                id="ebooks"
+                type="radio"
+                name="group"
+                value={graphic}
+                onChange={handleRadio}
+                className="mx-2 w-4 h-4"
+              ></input>
+              Ebooks/PDFs
+            </label>
+            <label
+              htmlFor="slides"
+              className="font-bold text-sm flex items-center rounded border border-slate-300 p-2"
+            >
+              <input
+                id="slides"
+                type="radio"
+                name="group"
+                value={graphic}
+                onChange={handleRadio}
+                className="mx-2 w-4 h-4"
+              ></input>
+              Slides/Carousel
+            </label>
+          </div>
+          <div className="grid gap-2">
+            <label
+              htmlFor="logo"
+              className="font-bold text-sm flex items-center rounded border border-slate-300 p-2"
+            >
+              <input
+                id="logo"
+                type="radio"
+                name="group"
+                value={graphic}
+                onChange={handleRadio}
+                className="mx-2 w-4 h-4"
+              ></input>
+              Logo
+            </label>
+            <label
+              htmlFor="others"
+              className="font-bold text-sm flex items-center rounded border border-slate-300 p-2"
+            >
+              <input
+                id="others"
+                type="radio"
+                name="group"
+                value={graphic}
+                onChange={handleRadio}
+                className="mx-2 w-4 h-4"
+              ></input>
+              Others
+            </label>
+          </div>
         </div>
         <input
           type="submit"
