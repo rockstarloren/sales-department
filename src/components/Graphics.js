@@ -97,8 +97,9 @@ function Graphics() {
             name="rushDays"
             onChange={handleInput}
             value={rushDays}
-            placeholder="Rush Days"
-            className="py-3 px-2 outline-none border border-slate-300 rounded w-full"
+            placeholder="Rush Days (Temporarily Unavailable)"
+            className="py-3 px-2 outline-none border border-slate-300 rounded w-full bg-slate-200"
+            disabled
           ></input>
         </div>
         <p className="my-2 text-sm text-[#007872] font-bold">
