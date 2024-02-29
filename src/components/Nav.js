@@ -41,6 +41,18 @@ function Nav() {
             </li>
           </Link>
         </div>
+        <div className="grid gap-2">
+          <Link to={"/consumable"}>
+            <li className="text-white text-sm cursor-pointer bg-[#007872] rounded cursor-pointer hover:bg-[#008f88] py-3 px-6">
+              Consumable
+            </li>
+          </Link>
+          <Link to={"/"}>
+            <li className="text-white text-sm cursor-pointer bg-[#007872] rounded cursor-pointer hover:bg-[#008f88] py-3 px-6">
+              Blank
+            </li>
+          </Link>
+        </div>
       </ul>
     </nav>
   );

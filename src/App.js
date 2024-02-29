@@ -10,6 +10,7 @@ import Design from "./components/Design";
 import Build from "./components/Build";
 import Graphics from "./components/Graphics";
 import Technical from "./components/Technical";
+import Consumable from "./components/Consumable";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/build" element={<Build />} />
         <Route path="/graphics" element={<Graphics />} />
         <Route path="/technical" element={<Technical />} />
+        <Route path="/consumable" element={<Consumable />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
